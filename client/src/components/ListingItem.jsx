@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import { MdLocationOn } from 'react-icons/md';
 
@@ -27,11 +28,22 @@ export default function ListingItem({ listing }) {
             {listing.description}
           </p>
           <p className='text-slate-500 mt-2 font-semibold '>
-            $
-            {listing.offer
+            {/* {listing.offer
               ? listing.discountPrice.toLocaleString('en-US')
-              : listing.regularPrice.toLocaleString('en-US')}
-            {listing.type === 'rent' && ' / month'}
+              : listing.regularPrice.toLocaleString('en-US')} */}
+              {listing.offer && (
+                <p >
+              {listing.type === 'rent' ? '₹'+[`${+listing.regularPrice - +listing.discountPrice} /month`] : '₹'+[`${+listing.regularPrice - +listing.discountPrice} `] }
+                 {/* ₹ {+listing.regularPrice - +listing.discountPrice} /month */}
+                </p>
+              )}
+              {!listing.offer && (
+                <p >
+              {listing.type === 'rent' ? '₹'+[`${+listing.regularPrice } /month`] : '₹'+[`${+listing.regularPrice } `] }
+                 {/* ₹ {+listing.regularPrice - +listing.discountPrice} /month */}
+                </p>
+              )}
+            {/* {listing.type === 'rent' && ' / month'} */}
           </p>
           <div className='text-slate-700 flex gap-4'>
             <div className='font-bold text-xs'>
