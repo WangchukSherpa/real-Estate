@@ -13,7 +13,7 @@ The Modern Real Estate Marketplace is an innovative web application designed to 
 
 **User Profiles and Dashboard:** Provide users with personalized profiles and dashboards where they can manage their listings, track their property activities, and communicate with potential buyers or sellers.
 
-**Real-Time Messaging and Notifications using mail: **Implement a real-time messaging system that enables seamless communication between buyers and sellers. Integrate notifications to keep users updated about new property listings, inquiries, and other relevant activities.
+**Real-Time Messaging and Notifications using mail:** Implement a real-time messaging system that enables seamless communication between buyers and sellers. Integrate notifications to keep users updated about new property listings, inquiries, and other relevant activities.
 
 
 **Responsive Design and Intuitive User Interface:** Develop a responsive and user-friendly interface that ensures a seamless experience across various devices, including desktops, tablets, and mobile phones. Implement intuitive design elements and smooth navigation to enhance user engagement and satisfaction.
