@@ -27,10 +27,7 @@ export default function ListingItem({ listing }) {
           <p className='text-sm text-gray-600 line-clamp-2'>
             {listing.description}
           </p>
-          <p className='text-slate-500 mt-2 font-semibold '>
-            {/* {listing.offer
-              ? listing.discountPrice.toLocaleString('en-US')
-              : listing.regularPrice.toLocaleString('en-US')} */}
+          <p className='text-slate-500 mt-2 font-semibold flex gap-x-8 '>
               {listing.offer && (
                 <p >
               {listing.type === 'rent' ? '₹'+[`${+listing.regularPrice - +listing.discountPrice} /month`] : '₹'+[`${+listing.regularPrice - +listing.discountPrice} `] }
@@ -40,6 +37,12 @@ export default function ListingItem({ listing }) {
               {!listing.offer && (
                 <p >
               {listing.type === 'rent' ? '₹'+[`${+listing.regularPrice } /month`] : '₹'+[`${+listing.regularPrice } `] }
+                 {/* ₹ {+listing.regularPrice - +listing.discountPrice} /month */}
+                </p>
+              )}
+              {listing.offer && (
+                <p className='font-bold text-xs text-green-800' >
+              {listing.type === 'rent' ? 'save ₹'+[`${listing.discountPrice} /month`] : 'save ₹'+[`${listing.discountPrice} `] }
                  {/* ₹ {+listing.regularPrice - +listing.discountPrice} /month */}
                 </p>
               )}
